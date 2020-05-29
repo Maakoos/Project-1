@@ -5,7 +5,7 @@ import Heading from "components/Heading";
 import HostingCard from "components/HostingCard";
 
 const Wrapper = styled.section`
-  background-color: ${({ theme }) => theme.hostingSectionBackground};
+  background-color: ${({ theme }) => theme.secondaryColor};
 `;
 
 const GridBox = styled.div`

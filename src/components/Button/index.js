@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Btn = styled.button`
   padding: 15px 20px;
@@ -10,8 +10,17 @@ const Btn = styled.button`
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
+  cursor: pointer;
+
+  ${({ light }) =>
+    light &&
+    css`
+      width: 90%;
+      background-color: #f2f2f2;
+      color: #000;
+    `}
 `;
 
-const Button = ({ children }) => <Btn>{children}</Btn>;
+const Button = ({ children, light }) => <Btn light={light}>{children}</Btn>;
 
 export default Button;

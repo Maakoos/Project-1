@@ -4,6 +4,7 @@ import MobileNav from "components/MobileNav";
 import Banner from "components/Banner";
 import RegisterSection from "components/RegisterSection";
 import HostingSection from "components/HostingSection";
+import PlanSection from "components/PlanSection";
 
 const HomePage = () => (
   <>
@@ -12,6 +13,7 @@ const HomePage = () => (
     <Banner />
     <RegisterSection />
     <HostingSection />
+    <PlanSection />
   </>
 );
 
