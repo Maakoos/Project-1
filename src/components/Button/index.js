@@ -19,8 +19,20 @@ const Btn = styled.button`
       background-color: #f2f2f2;
       color: #000;
     `}
+
+  ${({ signUp }) =>
+    signUp &&
+    css`
+      margin-left: 10px;
+      background-color: transparent;
+      border: 2px solid ${({ theme }) => theme.primaryColor};
+    `}
 `;
 
-const Button = ({ children, light }) => <Btn light={light}>{children}</Btn>;
+const Button = ({ children, light, signUp }) => (
+  <Btn light={light} signUp={signUp}>
+    {children}
+  </Btn>
+);
 
 export default Button;

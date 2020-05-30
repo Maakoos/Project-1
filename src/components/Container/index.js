@@ -1,12 +1,20 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Wrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 15px;
+
+  ${({ footer }) =>
+    footer &&
+    css`
+      padding-bottom: 40px;
+    `}
 `;
 
-const Container = ({ children }) => <Wrapper>{children}</Wrapper>;
+const Container = ({ children, footer }) => (
+  <Wrapper footer={footer}>{children}</Wrapper>
+);
 
 export default Container;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import InfoBox from "components/InfoBox";
+// import InfoBox from "components/InfoBox";
 
 const Wrapper = styled.div`
   display: none;
@@ -25,6 +25,14 @@ const Item = styled.div`
   }
 `;
 
+const Link = styled.a`
+  cursor: pointer;
+`;
+
+const IconName = styled.span`
+  margin-left: 20px;
+`;
+
 const HeaderInfo = () => (
   <Wrapper>
     {/* <InfoItem>
@@ -32,16 +40,27 @@ const HeaderInfo = () => (
       <span>123-456-7890</span>
     </InfoItem> */}
     <Item>
-      <InfoBox iconClassName="fas fa-phone" iconTxt="123-456-7890" />
+      {/* <InfoBox iconClassName="fas fa-phone" iconTxt="123-456-7890" /> */}
+      <span className="fas fa-phone"></span>
+      <IconName>123-456-7890</IconName>
     </Item>
     <Item>
-      <InfoBox iconClassName="fas fa-envelope" iconTxt="support@mail.com" />
+      {/* <InfoBox iconClassName="fas fa-envelope" iconTxt="support@mail.com" /> */}
+      <span className="fas fa-envelope"></span>
+      <IconName>support@mail.com</IconName>
     </Item>
     <Item>
-      <InfoBox iconClassName="fas fa-comments" iconTxt="Live chat" />
+      <Link>
+        <span className="fas fa-comments"></span>
+        <IconName>Live chat</IconName>
+      </Link>
     </Item>
     <Item>
-      <InfoBox iconClassName="fas fa-phone" iconTxt="Login/Register" />
+      <Link iconClassName="fas fa-phone" iconTxt="Login/Register" />
+      <Link>
+        <span className="fas fa-phone"></span>
+        <IconName>Login/Ragister</IconName>
+      </Link>
     </Item>
   </Wrapper>
 );

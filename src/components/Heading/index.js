@@ -20,15 +20,34 @@ const HeadingTxt = styled.h2`
     background-image: url(${line});
     transform: translateX(-50%);
   }
+
+  ${({ small }) =>
+    small &&
+    css`
+      text-align: left;
+      text-transform: none;
+
+      &::after {
+        display: none;
+      }
+    `}
+
+  ${({ white }) =>
+    white &&
+    css`
+      color: #fff;
+    `}
 `;
 
 /* const LineImg = styled.img`
   margin: 20px 0 10px;
 `; */
 
-const Heading = ({ children }) => (
+const Heading = ({ children, small, white }) => (
   <>
-    <HeadingTxt>{children}</HeadingTxt>
+    <HeadingTxt small={small} white={white}>
+      {children}
+    </HeadingTxt>
     {/* <LineImg src={line} alt="" /> */}
   </>
 );
