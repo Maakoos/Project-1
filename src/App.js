@@ -1,9 +1,14 @@
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "styles/GlobalStyle";
 import { theme } from "styles/theme";
 import HomePage from "pages/HomePage";
+import AboutPage from "pages/AboutPage";
 import MyContext from "context/Context";
+import Footer from "components/Footer";
+import Header from "components/Header";
+import MobileNav from "components/MobileNav";
 
 class App extends React.Component {
   state = {
@@ -31,10 +36,21 @@ class App extends React.Component {
     return (
       <MyContext.Provider value={contextElements}>
         <div className="App">
-          <GlobalStyle />
-          <ThemeProvider theme={theme}>
-            <HomePage />
-          </ThemeProvider>
+          <BrowserRouter>
+            <GlobalStyle />
+            <ThemeProvider theme={theme}>
+              {/* <HeaderInfo /> */}
+              {/* <DesktopNav /> */}
+              <Header />
+              <MobileNav />
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/about" component={AboutPage} />
+                {/* <HomePage /> */}
+              </Switch>
+              <Footer />
+            </ThemeProvider>
+          </BrowserRouter>
         </div>
       </MyContext.Provider>
     );

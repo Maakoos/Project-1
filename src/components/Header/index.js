@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import logo from "img/logo.png";
+// import logo from "img/logo.png";
+import background from "img/banner-bg.jpg";
 // import Container from "components/Container";
 import MyContext from "context/Context";
 import MobileBtn from "components/MobileBtn";
 import DesktopNav from "components/DesktopNav";
 import HeaderInfo from "components/HeaderInfo";
+import Logo from "components/Logo";
 
-const Heading = styled.header`
+const Wrapper = styled.header`
   /* display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +18,10 @@ const Heading = styled.header`
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 15px;
+`;
+
+const BackgroundWrapper = styled.div`
+  background-image: url(${background});
 `;
 
 const ContentBox = styled.div`
@@ -28,18 +34,19 @@ const Header = () => {
   const myContext = useContext(MyContext);
   console.log(myContext);
   return (
-    <Heading>
-      <>
+    <BackgroundWrapper>
+      <Wrapper>
         <HeaderInfo />
         <ContentBox>
-          <img src={logo} alt="logo" />
+          {/* <img src={logo} alt="logo" /> */}
+          <Logo />
           <MobileBtn onClick={myContext.openMobileMenu}>
             <span className="fas fa-bars"></span>
           </MobileBtn>
           <DesktopNav />
         </ContentBox>
-      </>
-    </Heading>
+      </Wrapper>
+    </BackgroundWrapper>
   );
 };
 

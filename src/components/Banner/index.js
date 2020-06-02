@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "components/Container";
-import Header from "components/Header";
+// import Header from "components/Header";
 import Button from "components/Button";
 import background from "img/banner-bg.jpg";
 import bannerImage from "img/bannerImage.png";
@@ -49,7 +49,7 @@ const BannerImg = styled.img`
 
 const Banner = () => (
   <Wrapper>
-    <Header />
+    {/* <Header /> */}
     <Container>
       <Content>
         <HeadingBox>

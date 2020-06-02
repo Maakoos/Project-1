@@ -14,7 +14,7 @@ const GridBox = styled.div`
   grid-gap: 30px;
 `;
 
-const Item = styled.div`
+/* const Item = styled.div`
   padding: 30px;
   background-color: #fff;
   border-radius: 10px;
@@ -24,7 +24,7 @@ const Item = styled.div`
   &:hover {
     box-shadow: 0px 0px 40px rgba(18, 8, 81, 0.15);
   }
-`;
+`; */
 
 /* const Name = styled.h3`
   font-size: 20px;
@@ -48,48 +48,48 @@ const HostingSection = () => (
     <Container>
       <Heading>Chose the right hosting solutuon</Heading>
       <GridBox>
-        <Item>
-          <HostingCard
-            title="Shared Hosting"
-            price="1.84"
-            description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Item>
-        <Item>
-          <HostingCard
-            title="Wordpress Hosting"
-            price="1.84"
-            description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Item>
-        <Item>
-          <HostingCard
-            title="Dedicated Hosting"
-            price="1.84"
-            description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Item>
-        <Item>
-          <HostingCard
-            title="SSL certificate"
-            price="1.84"
-            description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Item>
-        <Item>
-          <HostingCard
-            title="Web Hosting"
-            price="1.84"
-            description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Item>
-        <Item>
-          <HostingCard
-            title="Cloud server"
-            price="1.84"
-            description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Item>
+        {/* <Item> */}
+        <HostingCard
+          title="Shared Hosting"
+          price="1.84"
+          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        {/* </Item> */}
+        {/* <Item> */}
+        <HostingCard
+          title="Wordpress Hosting"
+          price="1.84"
+          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        {/* </Item> */}
+        {/* <Item> */}
+        <HostingCard
+          title="Dedicated Hosting"
+          price="1.84"
+          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        {/* </Item> */}
+        {/* <Item> */}
+        <HostingCard
+          title="SSL certificate"
+          price="1.84"
+          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        {/* </Item> */}
+        {/* <Item> */}
+        <HostingCard
+          title="Web Hosting"
+          price="1.84"
+          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        {/* </Item> */}
+        {/* <Item> */}
+        <HostingCard
+          title="Cloud server"
+          price="1.84"
+          description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        />
+        {/* </Item> */}
       </GridBox>
     </Container>
   </Wrapper>

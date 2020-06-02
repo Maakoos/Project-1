@@ -7,7 +7,8 @@ const HeadingTxt = styled.h2`
   text-align: center;
   margin-bottom: 70px;
   position: relative;
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: ${({ size }) => size || "30px"};
   text-transform: uppercase;
 
   &::after {
@@ -37,15 +38,26 @@ const HeadingTxt = styled.h2`
     css`
       color: #fff;
     `}
+    
+    ${({ noLine }) =>
+      noLine &&
+      css`
+        text-align: left;
+
+        &::after {
+          display: none;
+        }
+        }
+      `}
 `;
 
 /* const LineImg = styled.img`
   margin: 20px 0 10px;
 `; */
 
-const Heading = ({ children, small, white }) => (
+const Heading = ({ children, small, white, size, noLine }) => (
   <>
-    <HeadingTxt small={small} white={white}>
+    <HeadingTxt small={small} white={white} size={size} noLine={noLine}>
       {children}
     </HeadingTxt>
     {/* <LineImg src={line} alt="" /> */}

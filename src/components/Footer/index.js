@@ -3,8 +3,10 @@ import styled, { css } from "styled-components";
 import Container from "components/Container";
 import Button from "components/Button";
 import Copyright from "components/Copyright";
-import logo from "img/logo.png";
+// import logo from "img/logo.png";
 import background from "img/footer-bg.png";
+import Description from "components/Description";
+import Logo from "components/Logo";
 
 const Wrapper = styled.footer`
   position: relative;
@@ -85,11 +87,11 @@ const BottomFooterBg = styled.div`
   background-position: center;
 `;
 
-const Description = styled.p`
+/* const Description = styled.p`
   margin: 20px 0;
   font-size: 14px;
   line-height: 1.8;
-`;
+`; */
 
 const SocialBox = styled.div`
   display: flex;
@@ -166,7 +168,8 @@ const Footer = () => (
       <Container footer>
         <BottomFooter>
           <Column setMaxWidth>
-            <img src={logo} alt="" />
+            {/* <img src={logo} alt="" /> */}
+            <Logo />
             <Description>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis

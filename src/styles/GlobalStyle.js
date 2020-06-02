@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
   button {
     font-family: "Montserrat", sans-serif;
   }
+
+   img {
+    width: 100%;
+  }
 `;
 
 export default GlobalStyle;

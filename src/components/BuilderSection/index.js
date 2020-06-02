@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Container from "components/Container";
 import Heading from "components/Heading";
 import Button from "components/Button";
+import Description from "components/Description";
 
 const Wrapper = styled.section`
   margin-top: -400px;
@@ -48,18 +49,19 @@ const SmallHeading = styled.span`
 `;
 
 const Headline = styled.h3`
-  margin: 5px 0 20px;
+  /* margin: 5px 0 20px; */
+  margin-top: 5px;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 700;
 `;
 
-const Desdripiton = styled.p`
+/* const Description = styled.p`
   margin-bottom: 30px;
-  /* text-align: center; */
+  text-align: center;
   font-size: 14px;
   line-height: 2;
-`;
+`; */
 
 const BuilderSection = () => (
   <Wrapper>
@@ -70,22 +72,22 @@ const BuilderSection = () => (
           <Icon className="fa fa-desktop"></Icon>
           <SmallHeading>Create your own website wiht our</SmallHeading>
           <Headline>Web Site Builder</Headline>
-          <Desdripiton>
+          <Description align="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravida facilisis.
-          </Desdripiton>
+          </Description>
           <Button>Read More</Button>
         </Item>
         <Item>
           <Icon className="fa fa-shopping-bag"></Icon>
           <SmallHeading>Easy create, manage & sell</SmallHeading>
           <Headline>Online store</Headline>
-          <Desdripiton>
+          <Description align="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravida facilisis.
-          </Desdripiton>
+          </Description>
           <Button>Read More</Button>
         </Item>
       </ItemsBox>

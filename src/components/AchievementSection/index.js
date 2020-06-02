@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import background from "img/achievement-bg.jpg";
 import Container from "components/Container";
+import AchievementItem from "components/AchievementItem";
 
 const WrapperBackground = styled.section`
   padding-bottom: 300px;
@@ -19,7 +20,7 @@ const ListItem = styled.ul`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `;
 
-const Item = styled.li`
+/* const Item = styled.li`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -40,13 +41,17 @@ const Amount = styled.span`
 const Txt = styled.span`
   font-size: 16px;
   text-transform: uppercase;
-`;
+`; */
 
 const AchievementSection = () => (
   <WrapperBackground>
     <Container>
       <ListItem>
-        <Item>
+        <AchievementItem names="clients" numbers="147" icon="far fa-user" />
+        <AchievementItem names="domains" numbers="1247" icon="far fa-edit" />
+        <AchievementItem names="servers" numbers="537" icon="far fa-clone" />
+        <AchievementItem names="installs" numbers="1784" icon="fa fa-cog" />
+        {/*  <Item>
           <Icon className="far fa-user"></Icon>
           <Amount>147</Amount>
           <Txt>Clients</Txt>
@@ -65,7 +70,7 @@ const AchievementSection = () => (
           <Icon className="fa fa-cog"></Icon>
           <Amount>1784</Amount>
           <Txt>Installs</Txt>
-        </Item>
+        </Item> */}
       </ListItem>
     </Container>
   </WrapperBackground>

@@ -14,6 +14,7 @@ const Nav = styled.nav`
   background-color: black;
   color: #fff;
   /* box-shadow: 20px 0px 5px 10px rgba(0, 0, 0, 0.75); */
+  z-index: 99;
   overflow-y: auto;
   transform: translateX(-120%);
   transition: transform 0.5s ease-out;

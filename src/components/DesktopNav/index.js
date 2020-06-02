@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -30,6 +31,8 @@ const Link = styled.a`
   display: block;
   position: relative;
   padding: 5px;
+  color: #fff;
+  text-decoration: none;
   cursor: pointer;
   z-index: 1;
 
@@ -55,19 +58,29 @@ const DesktopNav = () => (
   <Nav>
     <NavList>
       <NavItem>
-        <Link>Home</Link>
+        <Link as={NavLink} to="/">
+          Home
+        </Link>
       </NavItem>
       <NavItem>
-        <Link>About</Link>
+        <Link as={NavLink} to="/about">
+          About
+        </Link>
       </NavItem>
       <NavItem>
-        <Link>Hosting</Link>
+        <Link as={NavLink} to="/hosting">
+          Hosting
+        </Link>
       </NavItem>
       <NavItem>
-        <Link>News</Link>
+        <Link as={NavLink} to="/news">
+          News
+        </Link>
       </NavItem>
       <NavItem>
-        <Link>Contact</Link>
+        <Link as={NavLink} to="/contact">
+          Contact
+        </Link>
       </NavItem>
     </NavList>
   </Nav>

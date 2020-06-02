@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import Container from "components/Container";
 import Button from "components/Button";
 import Heading from "components/Heading";
+import Description from "components/Description";
 
 const Wrapper = styled.section`
   margin: 0 auto;
@@ -72,12 +73,12 @@ const DomainTxt = styled.span`
     `}
 `;
 
-const Description = styled.p`
+/* const Description = styled.p`
   margin-top: 15px;
   text-align: left;
   font-size: 14px;
   line-height: 1.8;
-`;
+`; */
 
 const RegisterSection = () => (
   <Container>
