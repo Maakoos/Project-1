@@ -9,6 +9,7 @@ import MyContext from "context/Context";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import MobileNav from "components/MobileNav";
+import HostingPage from "pages/HostingPage";
 
 class App extends React.Component {
   state = {
@@ -46,6 +47,7 @@ class App extends React.Component {
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />
+                <Route path="/hosting" component={HostingPage} />
                 {/* <HomePage /> */}
               </Switch>
               <Footer />
