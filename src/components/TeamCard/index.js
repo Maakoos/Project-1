@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Description from "components/Description";
+import SocialIcon from "components/SocialIcon";
 
 const Card = styled.div`
   display: flex;
@@ -69,33 +70,21 @@ const SocialsBox = styled.div`
   }
 `;
 
-const SocialIcon = styled.a`
-  color: ${({ color }) => color};
-`;
-
 const TeamCard = ({ imgSrc, name, position }) => (
   <Card>
     <ImgBox src={imgSrc} alt={name} />
     <TextContent>
       <Name>{name}</Name>
       <Profession>{position}</Profession>
-      <Description /* align="center" */>
+      <Description>
         Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
         et dolore magna aliqua.
       </Description>
       <SocialsBox>
-        <SocialIcon href="#" color="#3263af">
-          <span className="fab fa-facebook-f"></span>
-        </SocialIcon>
-        <SocialIcon href="#" color="#40c4ff">
-          <span className="fab fa-twitter"></span>
-        </SocialIcon>
-        <SocialIcon href="#" color="#ff0000">
-          <span className="fab fa-youtube"></span>
-        </SocialIcon>
-        <SocialIcon href="#" color="#b309d7">
-          <span className="fab fa-instagram"></span>
-        </SocialIcon>
+        <SocialIcon iconName="fab fa-facebook-f" color="#3263af" size="16" />
+        <SocialIcon iconName="fab fa-twitter" color="#40c4ff" size="16" />
+        <SocialIcon iconName="fab fa-youtube" color="#ff0000" size="16" />
+        <SocialIcon iconName="fab fa-instagram" color="#b309d7" size="16" />
       </SocialsBox>
     </TextContent>
   </Card>

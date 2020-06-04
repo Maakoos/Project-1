@@ -9,14 +9,6 @@ import imgTeamThree from "img/team/team-3.jpg";
 import imgTeamFour from "img/team/team-4.jpg";
 
 const CardsBox = styled.div`
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  } */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

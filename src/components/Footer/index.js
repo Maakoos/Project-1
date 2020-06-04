@@ -1,12 +1,12 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Container from "components/Container";
 import Button from "components/Button";
 import Copyright from "components/Copyright";
-// import logo from "img/logo.png";
 import background from "img/footer-bg.png";
 import Description from "components/Description";
 import Logo from "components/Logo";
+import SocialIcon from "components/SocialIcon";
 
 const Wrapper = styled.footer`
   position: relative;
@@ -41,10 +41,6 @@ const TopFooter = styled.div`
   color: #fff;
 `;
 
-const TopLeftBox = styled.div``;
-
-const TopRightBox = styled.div``;
-
 const Headline = styled.h5`
   margin: 10px 0;
   font-size: 20px;
@@ -59,22 +55,13 @@ const Numbers = styled.span`
 `;
 
 const BottomFooter = styled.div`
-  /* display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; */
   margin-top: 100px;
   padding-bottom: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* grid-template-columns: 350px 150px 150px 350px; */
   grid-gap: 40px;
   color: #c4c4c4;
   border-bottom: 1px solid #2a2163;
-
-  /* @media (min-width: 768px) {
-    grid-template-columns: 350px 150px 150px 350px;
-    grid-template-rows: repeat(2, 1fr);
-  } */
 
   @media (min-width: 1200px) {
     grid-template-columns: 350px 150px 150px 350px;
@@ -87,34 +74,13 @@ const BottomFooterBg = styled.div`
   background-position: center;
 `;
 
-/* const Description = styled.p`
-  margin: 20px 0;
-  font-size: 14px;
-  line-height: 1.8;
-`; */
-
 const SocialBox = styled.div`
   display: flex;
+  justify-content: space-between;
+  width: 150px;
 `;
 
-const SocialIcon = styled.a`
-  display: block;
-  margin-right: 20px;
-  color: #c4c4c4;
-  text-decoration: none;
-  font-size: 18px;
-  cursor: pointer;
-`;
-
-const Column = styled.div`
-  /* margin: 30px 0; */
-
-  /* ${({ setMaxWidth }) =>
-    setMaxWidth &&
-    css`
-      max-width: 360px;
-    `} */
-`;
+const Column = styled.div``;
 
 const Subtitle = styled.h5`
   color: #fff;
@@ -126,7 +92,6 @@ const Subtitle = styled.h5`
 const List = styled.ul`
   margin-top: 20px;
   list-style: none;
-  /* min-width: 170px; */
 `;
 
 const ListItem = styled.li`
@@ -152,15 +117,15 @@ const Footer = () => (
   <Wrapper>
     <Container>
       <TopFooter>
-        <TopLeftBox>
+        <div>
           <Headline>Need Help? Call us</Headline>
           <Numbers>175 946 2316 096</Numbers>
-        </TopLeftBox>
-        <TopRightBox>
+        </div>
+        <div>
           <Headline>Join now and have free month of deluxe hosting</Headline>
           <Button>Log in</Button>
           <Button signUp>Sign Up</Button>
-        </TopRightBox>
+        </div>
       </TopFooter>
     </Container>
 
@@ -168,7 +133,6 @@ const Footer = () => (
       <Container footer>
         <BottomFooter>
           <Column setMaxWidth>
-            {/* <img src={logo} alt="" /> */}
             <Logo />
             <Description>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -177,18 +141,10 @@ const Footer = () => (
               facilisis.
             </Description>
             <SocialBox>
-              <SocialIcon href="#">
-                <span className="fab fa-facebook-f"></span>
-              </SocialIcon>
-              <SocialIcon href="#">
-                <span className="fab fa-twitter"></span>
-              </SocialIcon>
-              <SocialIcon href="#">
-                <span className="fab fa-youtube"></span>
-              </SocialIcon>
-              <SocialIcon href="#">
-                <span className="fab fa-instagram"></span>
-              </SocialIcon>
+              <SocialIcon iconName="fab fa-facebook-f" size="18" />
+              <SocialIcon iconName="fab fa-twitter" size="18" />
+              <SocialIcon iconName="fab fa-youtube" size="18" />
+              <SocialIcon iconName="fab fa-instagram" size="18" />
             </SocialBox>
           </Column>
 

@@ -16,9 +16,6 @@ const Wrapper = styled.section`
 `;
 
 const ImgBox = styled.div`
-  /* flex-basis: 50%; */
-  /* min-width: 330px; */
-
   @media (min-width: 768px) {
     flex-basis: 48%;
   }
@@ -26,11 +23,9 @@ const ImgBox = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  /* flex-basis: 50%; */
 `;
 
 const List = styled.ul`
-  /* padding: 0 20px; */
   list-style: none;
   font-size: 16px;
   flex-basis: 48%;
@@ -40,11 +35,6 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin-bottom: 20px;
   font-weight: 500;
-
-  /* &::before {
-    content: "✓";
-    color: ${({ theme }) => theme.primaryColor};
-  } */
 `;
 
 const Checkmark = styled.span`

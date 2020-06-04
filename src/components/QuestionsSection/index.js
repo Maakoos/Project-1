@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Container from "components/Container";
 import Heading from "components/Heading";
-// import Description from "components/Description";
 import Form from "components/Form";
 
 const ContentBox = styled.div`
@@ -19,18 +18,7 @@ const QuestionBox = styled.div`
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
-  /* overflow: hidden; */
 `;
-
-/* const QuestionIcon = styled.span`
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  background-color: ${({ theme }) => theme.primaryColor};
-  color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-`; */
 
 const Question = styled.button`
   position: relative;
@@ -66,8 +54,6 @@ const Description = styled.p`
   margin: 10px 0;
   font-size: 14px;
   line-height: 2;
-  /* transform: scaleY(0);
-  transform-origin: top; */
   transition: all 0.2s linear;
   overflow: hidden;
   max-height: 0;
@@ -107,7 +93,6 @@ class QuestionsSection extends React.Component {
           <Heading>Have a questions?</Heading>
           <ContentBox>
             <QuestionBox>
-              {/* <QuestionIcon>+</QuestionIcon> */}
               <Question onClick={(e) => this.handleChangeActive(e)}>
                 How do I cancel my and delete my account?
               </Question>

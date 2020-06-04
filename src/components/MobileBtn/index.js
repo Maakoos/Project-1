@@ -22,6 +22,4 @@ const MobileBtn = styled.button`
     `}
 `;
 
-// const MobileBtn = ({ children }) => <Button close>{children}</Button>;
-
 export default MobileBtn;

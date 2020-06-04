@@ -14,82 +14,41 @@ const GridBox = styled.div`
   grid-gap: 30px;
 `;
 
-/* const Item = styled.div`
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(18, 8, 81, 0.15);
-  transition: box-shadow 0.2s linear;
-
-  &:hover {
-    box-shadow: 0px 0px 40px rgba(18, 8, 81, 0.15);
-  }
-`; */
-
-/* const Name = styled.h3`
-  font-size: 20px;
-  font-weight: 700;
-`;
-
-const Price = styled.span`
-  display: block;
-  margin: 10px 0;
-  color: ${({ theme }) => theme.primaryColor};
-  font-size: 15px;
-  font-weight: 500;
-`;
-
-const Description = styled.p`
-  font-size: 14px;
-`; */
-
 const HostingSection = () => (
   <Wrapper>
     <Container>
       <Heading>Chose the right hosting solutuon</Heading>
       <GridBox>
-        {/* <Item> */}
         <HostingCard
           title="Shared Hosting"
           price="1.84"
           description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
-        {/* </Item> */}
-        {/* <Item> */}
         <HostingCard
           title="Wordpress Hosting"
-          price="1.84"
+          price="1.99"
           description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
-        {/* </Item> */}
-        {/* <Item> */}
         <HostingCard
           title="Dedicated Hosting"
-          price="1.84"
+          price="2.50"
           description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
-        {/* </Item> */}
-        {/* <Item> */}
         <HostingCard
           title="SSL certificate"
-          price="1.84"
+          price="2.99"
           description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
-        {/* </Item> */}
-        {/* <Item> */}
         <HostingCard
           title="Web Hosting"
-          price="1.84"
+          price="1.55"
           description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
-        {/* </Item> */}
-        {/* <Item> */}
         <HostingCard
           title="Cloud server"
-          price="1.84"
+          price="4.99"
           description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
-        {/* </Item> */}
       </GridBox>
     </Container>
   </Wrapper>

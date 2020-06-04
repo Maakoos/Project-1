@@ -9,15 +9,9 @@ const TableWrapper = styled.div`
 `;
 
 const Table = styled.table`
-  /* border: 1px solid #000; */
   border-collapse: collapse;
   width: 100%;
-  /* min-width: 800px; */
 `;
-
-const Thead = styled.thead``;
-
-const Tr = styled.tr``;
 
 const Th = styled.th`
   display: table-cell;
@@ -33,7 +27,6 @@ const Td = styled.td`
 const PlanTitle = styled.h3`
   font-size: 24px;
   font-weight: 700;
-  /* text-transform: uppercase; */
 `;
 
 const Price = styled.span`
@@ -72,8 +65,8 @@ const TableSection = () => (
     <Heading>Web hosting plan perfect for you</Heading>
     <TableWrapper>
       <Table>
-        <Thead>
-          <Tr>
+        <thead>
+          <tr>
             <Th>
               <Icon>All shared hosting features</Icon>
               <PlanTitle>Choose perfect plan</PlanTitle>
@@ -96,11 +89,11 @@ const TableSection = () => (
               <Time>month</Time>
               <Button light>Buy now</Button>
             </Th>
-          </Tr>
-        </Thead>
+          </tr>
+        </thead>
 
         <tbody>
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Number of Websites</FeatureName>
             </Th>
@@ -113,9 +106,9 @@ const TableSection = () => (
             <Td>
               <FeatureInfo>Multiple Websites</FeatureInfo>
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Free Domain Registration</FeatureName>
             </Th>
@@ -128,9 +121,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Web Space</FeatureName>
             </Th>
@@ -143,9 +136,9 @@ const TableSection = () => (
             <Td>
               <FeatureInfo>Unlimited</FeatureInfo>
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Email Accounts</FeatureName>
             </Th>
@@ -158,9 +151,9 @@ const TableSection = () => (
             <Td>
               <FeatureInfo>Unlimited</FeatureInfo>
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>MySQL Databases</FeatureName>
             </Th>
@@ -173,9 +166,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Free App Store</FeatureName>
             </Th>
@@ -188,9 +181,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>cPanel Conotrl Panel</FeatureName>
             </Th>
@@ -203,9 +196,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Free Daily Backups</FeatureName>
             </Th>
@@ -218,9 +211,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Search Engine Optimization</FeatureName>
             </Th>
@@ -233,9 +226,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>99.9% Uptime Guarantee</FeatureName>
             </Th>
@@ -248,9 +241,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Bandwith</FeatureName>
             </Th>
@@ -263,9 +256,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Free Setup</FeatureName>
             </Th>
@@ -278,9 +271,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Advanced Security Features</FeatureName>
             </Th>
@@ -293,9 +286,9 @@ const TableSection = () => (
             <Td>
               <FeatureInfo>Extra</FeatureInfo>
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Colud Hosting</FeatureName>
             </Th>
@@ -308,9 +301,9 @@ const TableSection = () => (
             <Td>
               <FeatureInfo>$ 250.0</FeatureInfo>
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>24/7/365 Support</FeatureName>
             </Th>
@@ -323,9 +316,9 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>Website Bluilder</FeatureName>
             </Th>
@@ -338,9 +331,9 @@ const TableSection = () => (
             <Td>
               <FeatureInfo>Unlimited</FeatureInfo>
             </Td>
-          </Tr>
+          </tr>
 
-          <Tr>
+          <tr>
             <Th>
               <FeatureName>30 Day Money Back Guarantee</FeatureName>
             </Th>
@@ -353,7 +346,7 @@ const TableSection = () => (
             <Td>
               <Icon className="far fa-check-circle" />
             </Td>
-          </Tr>
+          </tr>
         </tbody>
       </Table>
     </TableWrapper>

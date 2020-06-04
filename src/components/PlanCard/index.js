@@ -71,9 +71,6 @@ const PlanCard = ({ title, price, capacity }) => (
       <PlanItem>Free marketing tool</PlanItem>
       <PlanItem>99,9% Services uptime</PlanItem>
       <PlanItem>30 day money back</PlanItem>
-      {/* {list.map((item) => (
-        <PlanItem key={item}>{item}</PlanItem>
-      ))} */}
     </PlanList>
     <Button light>Choose Plan</Button>
   </CardBox>

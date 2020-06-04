@@ -15,8 +15,6 @@ const Item = styled.div`
 `;
 
 const IconBox = styled.span`
-  /* display: block;
-  text-align: center; */
   color: ${({ theme }) => theme.primaryColor};
   font-size: 42px;
 `;
@@ -42,7 +40,6 @@ const Description = styled.p`
 
 const HostingCard = ({ title, price, description, icon }) => (
   <Item icon={icon}>
-    {/* <IconBox className="fas fa-cloud-upload-alt"></IconBox> */}
     {icon && <IconBox className={icon}></IconBox>}
     <Name icon={icon}>{title}</Name>
     {price && <Price>Starts At ${price}</Price>}

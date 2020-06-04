@@ -9,10 +9,6 @@ const Wrapper = styled.section`
   margin-top: -400px;
 `;
 
-/* const Background = styled.div`
-  background-color: #fff;
-`; */
-
 const ItemsBox = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -30,10 +26,6 @@ const Item = styled.div`
   padding: 0 40px;
   max-width: 470px;
   text-align: center;
-
-  /* &:nth-last-child(1) {
-    margin-bottom: 0;
-  } */
 `;
 
 const Icon = styled.span`
@@ -49,19 +41,11 @@ const SmallHeading = styled.span`
 `;
 
 const Headline = styled.h3`
-  /* margin: 5px 0 20px; */
   margin-top: 5px;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 700;
 `;
-
-/* const Description = styled.p`
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 2;
-`; */
 
 const BuilderSection = () => (
   <Wrapper>

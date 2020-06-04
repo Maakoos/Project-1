@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import InfoBox from "components/InfoBox";
 
 const Wrapper = styled.div`
   display: none;
@@ -35,17 +34,11 @@ const IconName = styled.span`
 
 const HeaderInfo = () => (
   <Wrapper>
-    {/* <InfoItem>
-      <span className="fas fa-phone"></span>
-      <span>123-456-7890</span>
-    </InfoItem> */}
     <Item>
-      {/* <InfoBox iconClassName="fas fa-phone" iconTxt="123-456-7890" /> */}
       <span className="fas fa-phone"></span>
       <IconName>123-456-7890</IconName>
     </Item>
     <Item>
-      {/* <InfoBox iconClassName="fas fa-envelope" iconTxt="support@mail.com" /> */}
       <span className="fas fa-envelope"></span>
       <IconName>support@mail.com</IconName>
     </Item>

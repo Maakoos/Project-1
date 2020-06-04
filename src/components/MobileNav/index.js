@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
-import logo from "img/logo.png";
 import MobileBtn from "components/MobileBtn";
+import Logo from "components/Logo";
 import MyContext from "context/Context";
 
 const Nav = styled.nav`
@@ -13,7 +14,6 @@ const Nav = styled.nav`
   padding: 30px;
   background-color: black;
   color: #fff;
-  /* box-shadow: 20px 0px 5px 10px rgba(0, 0, 0, 0.75); */
   z-index: 99;
   overflow-y: auto;
   transform: translateX(-120%);
@@ -40,6 +40,7 @@ const Link = styled.a`
   color: #fff;
   text-transform: capitalize;
   font-weight: 500;
+  text-decoration: none;
   border-bottom: 1px solid #fff;
 `;
 
@@ -56,25 +57,56 @@ const MobileNav = () => {
   console.log(myContext.isOpen);
   return (
     <Nav isOpen={myContext.isOpen}>
-      <MobileBtn onClick={myContext.closeMobileMenu} closeBtn>
+      <MobileBtn onClick={() => myContext.setIsOpen(false)} closeBtn>
         <span className="far fa-times-circle"></span>
       </MobileBtn>
-      <img src={logo} alt="logo" />
+      <Logo />
       <NavList>
         <NavItem>
-          <Link>Home</Link>
+          <Link
+            as={NavLink}
+            to="/"
+            onClick={() => myContext.setIsOpen(false)}
+            exact
+          >
+            Home
+          </Link>
         </NavItem>
         <NavItem>
-          <Link>About</Link>
+          <Link
+            as={NavLink}
+            to="/about"
+            onClick={() => myContext.setIsOpen(false)}
+          >
+            About
+          </Link>
         </NavItem>
         <NavItem>
-          <Link>Hosting</Link>
+          <Link
+            as={NavLink}
+            to="/hosting"
+            onClick={() => myContext.setIsOpen(false)}
+          >
+            Hosting
+          </Link>
         </NavItem>
         <NavItem>
-          <Link>News</Link>
+          <Link
+            as={NavLink}
+            to="/news"
+            onClick={() => myContext.setIsOpen(false)}
+          >
+            News
+          </Link>
         </NavItem>
         <NavItem>
-          <Link>Contact</Link>
+          <Link
+            as={NavLink}
+            to="/contact"
+            onClick={() => myContext.setIsOpen(false)}
+          >
+            Contact
+          </Link>
         </NavItem>
       </NavList>
       <NavSocialBox>

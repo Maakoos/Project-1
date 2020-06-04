@@ -1,13 +1,8 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const Label = styled.label`
-  /* ${({ isActive }) =>
-    isActive &&
-    css`
-      color: greenyellow;
-    `} */
-    padding: 15px 20px;
+  padding: 15px 20px;
   background-color: ${({ theme, isActive }) =>
     isActive ? theme.primaryColor : "transparent"};
   color: ${({ isActive }) => (isActive ? "#fff" : "#000")};

@@ -1,10 +1,20 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Button from "components/Button";
 
 const FormBox = styled.form`
-  /* width: 50%; */
+  margin-top: 20px;
   max-width: 555px;
+  grid-area: form;
+
+  ${({ flex }) =>
+    flex &&
+    css`
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: none;
+    `}
 `;
 
 const Input = styled.input`
@@ -14,6 +24,10 @@ const Input = styled.input`
   font-size: 14px;
   border: 1px solid #e1e1e1;
   border-radius: 10px;
+
+  @media (min-width: 768px) {
+    flex-basis: 49%;
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -27,8 +41,8 @@ const TextArea = styled.textarea`
   resize: none;
 `;
 
-const Form = () => (
-  <FormBox type="submit">
+const Form = ({ flex }) => (
+  <FormBox type="submit" flex={flex}>
     <Input type="text" placeholder="Name" />
     <Input type="email" placeholder="Email" />
     <TextArea placeholder="Question" />

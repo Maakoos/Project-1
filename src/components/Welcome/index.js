@@ -15,10 +15,6 @@ const Wrapper = styled.section`
 
 const ImgWrapper = styled.div`
   margin-bottom: 20px;
-  /* max-width: 550px; */
-  /* width: 550px; */
-  /* min-width: 330px;
-  max-width: 550px; */
 
   @media (min-width: 1024px) {
     flex-basis: 50%;
@@ -26,8 +22,6 @@ const ImgWrapper = styled.div`
 `;
 
 const TextBox = styled.div`
-  /* flex-basis: 50%; */
-
   @media (min-width: 1024px) {
     flex-basis: 50%;
   }

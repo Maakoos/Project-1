@@ -4,11 +4,8 @@ import Description from "components/Description";
 
 const Card = styled.div`
   position: relative;
-  /* flex-basis: 31%; */
   min-width: 360px;
   max-width: 360px;
-  /* margin-right: 30px; */
-  /* flex-basis: 360px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +21,6 @@ const ImgBox = styled.img`
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  /* margin-top: -50px; */
 `;
 
 const Name = styled.span`

@@ -3,11 +3,9 @@ import styled, { css } from "styled-components";
 import line from "img/line.png";
 
 const HeadingTxt = styled.h2`
-  /* margin-bottom: 10px; */
   text-align: center;
   margin-bottom: 70px;
   position: relative;
-  /* font-size: 30px; */
   font-size: ${({ size }) => size || "30px"};
   text-transform: uppercase;
 
@@ -49,18 +47,31 @@ const HeadingTxt = styled.h2`
         }
         }
       `}
+
+      ${({ contact }) =>
+        contact &&
+        css`
+          grid-area: heading;
+          text-align: left;
+          margin-bottom: 0px;
+
+          &::after {
+            display: none;
+          }
+        `}
 `;
 
-/* const LineImg = styled.img`
-  margin: 20px 0 10px;
-`; */
-
-const Heading = ({ children, small, white, size, noLine }) => (
+const Heading = ({ children, small, white, size, noLine, contact }) => (
   <>
-    <HeadingTxt small={small} white={white} size={size} noLine={noLine}>
+    <HeadingTxt
+      small={small}
+      white={white}
+      size={size}
+      noLine={noLine}
+      contact={contact}
+    >
       {children}
     </HeadingTxt>
-    {/* <LineImg src={line} alt="" /> */}
   </>
 );
 

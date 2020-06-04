@@ -10,13 +10,11 @@ const Item = styled.li`
 
 const Icon = styled.span`
   color: ${({ theme }) => theme.primaryColor};
-  /* font-size: 40px; */
   font-size: ${({ small }) => (small ? "30px" : "40px")};
 `;
 
 const Amount = styled.span`
   margin: 20px 0 10px;
-  /* font-size: 36px; */
   font-size: ${({ small }) => (small ? "24px" : "36px")};
   font-weight: 700;
 `;

@@ -7,23 +7,12 @@ import Description from "components/Description";
 
 const Wrapper = styled.section`
   margin: 0 auto;
-  /* width: 60%; */
   text-align: center;
 
   @media (min-width: 768px) {
     width: 60%;
   }
 `;
-
-/* const Heading = styled.h2`
-  margin-bottom: 10px;
-  font-size: 30px;
-  text-transform: uppercase;
-`;
-
-const LineImg = styled.img`
-  margin: 20px 0 10px;
-`; */
 
 const Form = styled.form`
   display: flex;
@@ -43,15 +32,11 @@ const Input = styled.input`
 
 const CostList = styled.ul`
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, 100px); */
   list-style: none;
 `;
 
 const CostItem = styled.li`
-  /* flex-basis: 20%; */
   margin-right: 20px;
   margin-bottom: 15px;
 
@@ -73,18 +58,9 @@ const DomainTxt = styled.span`
     `}
 `;
 
-/* const Description = styled.p`
-  margin-top: 15px;
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.8;
-`; */
-
 const RegisterSection = () => (
   <Container>
     <Wrapper>
-      {/* <Heading>Register your domain now!</Heading>
-      <LineImg src={line} alt="" /> */}
       <Heading>Register your domain now!</Heading>
       <Form>
         <Input placeholder="ex: cloudhost.com" />

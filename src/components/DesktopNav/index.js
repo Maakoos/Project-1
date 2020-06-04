@@ -52,13 +52,19 @@ const Link = styled.a`
     transition: opacity 0.25s linear;
     z-index: -1;
   }
+
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
 `;
 
 const DesktopNav = () => (
   <Nav>
     <NavList>
       <NavItem>
-        <Link as={NavLink} to="/">
+        <Link as={NavLink} to="/" exact>
           Home
         </Link>
       </NavItem>

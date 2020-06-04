@@ -1,22 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "components/Container";
-// import Header from "components/Header";
 import Button from "components/Button";
 import background from "img/banner-bg.jpg";
 import bannerImage from "img/bannerImage.png";
 
 const Wrapper = styled.section`
-  /* padding-top: 100px; */
   background-image: url(${background});
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   color: #fff;
 `;
 
 const Content = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
 
   @media (min-width: 1024px) {
@@ -37,11 +34,8 @@ const SmallHeading = styled.span`
   font-weight: 500;
 `;
 
-const HeadingBox = styled.div``;
-
 const BannerImg = styled.img`
   display: block;
-  /* max-width: 300px; */
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
@@ -49,14 +43,13 @@ const BannerImg = styled.img`
 
 const Banner = () => (
   <Wrapper>
-    {/* <Header /> */}
     <Container>
       <Content>
-        <HeadingBox>
+        <div>
           <SmallHeading>Starting At Only $2.8/month </SmallHeading>
           <Heading>Welcome to the best hosting company</Heading>
           <Button>Get started now</Button>
-        </HeadingBox>
+        </div>
         <BannerImg src={bannerImage} alt="corporation" />
       </Content>
     </Container>
