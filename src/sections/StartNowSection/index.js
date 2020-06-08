@@ -50,7 +50,7 @@ const StartNowSection = () => (
       </ImgBox>
 
       <List>
-        <Heading small>
+        <Heading small noLine>
           up to 70% discount with free domain name registration included!
         </Heading>
         <ListItem>

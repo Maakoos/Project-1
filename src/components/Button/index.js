@@ -1,5 +1,23 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const shake = keyframes`
+   0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+`;
 
 const Btn = styled.button`
   padding: 15px 20px;
@@ -12,12 +30,22 @@ const Btn = styled.button`
   border-radius: 50px;
   cursor: pointer;
 
+  &:hover {
+    animation: ${shake} 0.7s ease-in-out both;
+  }
+
   ${({ light }) =>
     light &&
     css`
       width: 90%;
       background-color: #f2f2f2;
       color: #000;
+      transition: all 0.7s ease-in-out;
+
+      &:hover {
+        background-color: ${({ theme }) => theme.primaryColor};
+        color: #fff;
+      }
     `}
 
   ${({ signUp }) =>

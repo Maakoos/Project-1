@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "components/Container";
-import ContactInfo from "components/ContactInfo";
+import ContactInfo from "sections/ContactInfo";
 
 const ContactPage = () => (
   <section>

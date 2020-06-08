@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "components/Container";
-import TableSection from "components/TableSection";
-import QuestionsSection from "components/QuestionsSection";
+import TableSection from "sections/TableSection";
+import QuestionsSection from "sections/QuestionsSection";
 
 const HostingPage = () => (
   <section>

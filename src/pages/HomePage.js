@@ -1,11 +1,11 @@
 import React from "react";
 import Banner from "components/Banner";
-import RegisterSection from "components/RegisterSection";
-import HostingSection from "components/HostingSection";
-import PlanSection from "components/PlanSection";
-import AchievementSection from "components/AchievementSection";
-import BuilderSection from "components/BuilderSection";
-import StartNowSection from "components/StartNowSection";
+import RegisterSection from "sections/RegisterSection";
+import HostingSection from "sections/HostingSection";
+import PlanSection from "sections/PlanSection";
+import AchievementSection from "sections/AchievementSection";
+import BuilderSection from "sections/BuilderSection";
+import StartNowSection from "sections/StartNowSection";
 
 const HomePage = () => (
   <>

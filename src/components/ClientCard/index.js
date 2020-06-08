@@ -4,15 +4,24 @@ import Description from "components/Description";
 
 const Card = styled.div`
   position: relative;
-  min-width: 360px;
+  margin-bottom: 100px;
+  padding-top: 85px;
+  min-width: 330px;
   max-width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 85px;
+
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0px 2px 10px rgba(18, 8, 81, 0.15);
+
+  &:nth-last-child(1) {
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 `;
 
 const ImgBox = styled.img`

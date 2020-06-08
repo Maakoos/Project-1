@@ -24,7 +24,6 @@ const ContentBox = styled.div`
 `;
 const Header = () => {
   const myContext = useContext(MyContext);
-  console.log(myContext);
   return (
     <BackgroundWrapper>
       <Wrapper>

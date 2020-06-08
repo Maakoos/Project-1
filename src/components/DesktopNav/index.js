@@ -79,11 +79,6 @@ const DesktopNav = () => (
         </Link>
       </NavItem>
       <NavItem>
-        <Link as={NavLink} to="/news">
-          News
-        </Link>
-      </NavItem>
-      <NavItem>
         <Link as={NavLink} to="/contact">
           Contact
         </Link>

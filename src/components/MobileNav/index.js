@@ -44,8 +44,11 @@ const Link = styled.a`
   border-bottom: 1px solid #fff;
 `;
 
-const NavSocialBox = styled.div`
+const NavSocialBox = styled.a`
+  display: block;
   margin-bottom: 20px;
+  color: #fff;
+  text-decoration: none;
 `;
 
 const IconName = styled.span`
@@ -54,7 +57,6 @@ const IconName = styled.span`
 
 const MobileNav = () => {
   const myContext = useContext(MyContext);
-  console.log(myContext.isOpen);
   return (
     <Nav isOpen={myContext.isOpen}>
       <MobileBtn onClick={() => myContext.setIsOpen(false)} closeBtn>
@@ -93,15 +95,6 @@ const MobileNav = () => {
         <NavItem>
           <Link
             as={NavLink}
-            to="/news"
-            onClick={() => myContext.setIsOpen(false)}
-          >
-            News
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link
-            as={NavLink}
             to="/contact"
             onClick={() => myContext.setIsOpen(false)}
           >
@@ -109,19 +102,19 @@ const MobileNav = () => {
           </Link>
         </NavItem>
       </NavList>
-      <NavSocialBox>
+      <NavSocialBox href="#">
         <span className="fas fa-comments"></span>
         <IconName>Live chat</IconName>
       </NavSocialBox>
-      <NavSocialBox>
+      <NavSocialBox href="#">
         <span className="fas fa-user"></span>
         <IconName>Login/Register</IconName>
       </NavSocialBox>
-      <NavSocialBox>
+      <NavSocialBox href="#">
         <span className="fas fa-phone"></span>
         <IconName>123-456-7890</IconName>
       </NavSocialBox>
-      <NavSocialBox>
+      <NavSocialBox href="#">
         <span className="fas fa-envelope"></span>
         <IconName>support@mail.com</IconName>
       </NavSocialBox>

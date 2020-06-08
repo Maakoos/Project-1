@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Heading from "components/Heading";
 import Description from "components/Description";
+import ContactIcon from "components/ContactIcon";
 import SocialIcon from "components/SocialIcon";
 import Form from "components/Form";
 
@@ -40,17 +41,6 @@ const ContactTxtBox = styled.div`
   margin-left: 20px;
 `;
 
-const Icon = styled.span`
-  width: 46px;
-  height: 46px;
-  line-height: 46px;
-  text-align: center;
-  background-color: ${({ theme }) => theme.primaryColor};
-  color: #fff;
-  font-size: 20px;
-  border-radius: 10px;
-`;
-
 const Headline = styled.h5`
   margin-bottom: 5px;
   font-size: 20px;
@@ -81,27 +71,29 @@ const Map = styled.div`
 const ContactInfo = () => (
   <Wrapper>
     <ContentTxt>
-      <Heading contact>Contact Info</Heading>
+      <Heading contact noLine>
+        Contact Info
+      </Heading>
       <Description>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </Description>
       <ContactBox>
-        <Icon className="fas fa-map-marker-alt"></Icon>
+        <ContactIcon iconClass="fas fa-map-marker-alt" />
         <ContactTxtBox>
           <Headline>Adress</Headline>
           <ContactTxt>160 Pensylvania Ave NW, Washington Castle</ContactTxt>
         </ContactTxtBox>
       </ContactBox>
       <ContactBox>
-        <Icon className="fas fa-mobile-alt"></Icon>
+        <ContactIcon iconClass="fas fa-mobile-alt" />
         <ContactTxtBox>
           <Headline>Phone</Headline>
           <ContactTxt>125-677-118 || 125-745-199</ContactTxt>
         </ContactTxtBox>
       </ContactBox>
       <ContactBox>
-        <Icon className="fas fa-headphones-alt"></Icon>
+        <ContactIcon iconClass="fas fa-headphones-alt" />
         <ContactTxtBox>
           <Headline>Email</Headline>
           <ContactTxt>support@mail.com</ContactTxt>
@@ -125,7 +117,9 @@ const ContactInfo = () => (
         title="map"
       ></iframe>
     </Map>
-    <Heading contact>Send Message</Heading>
+    <Heading contact noLine>
+      Send Message
+    </Heading>
     <Form flex />
   </Wrapper>
 );

@@ -9,11 +9,17 @@ const Card = styled.div`
   align-items: center;
   text-align: center;
   padding: 25px;
-
   border: 1px solid #d7d7d7;
-
   flex-basis: 100%;
   margin-bottom: 30px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &.showIn {
+    transform: rotate(0);
+    opacity: 1;
+  }
 
   @media (min-width: 768px) {
     flex-basis: 49%;
