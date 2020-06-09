@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import CountUp from "react-countup";
 
 const Item = styled.li`
   display: flex;
@@ -25,12 +26,42 @@ const Txt = styled.span`
   text-transform: uppercase;
 `;
 
-const AchievementItem = ({ names, numbers, icon, small }) => (
-  <Item>
-    <Icon className={icon} small={small}></Icon>
-    <Amount small={small}>{numbers}</Amount>
-    <Txt small={small}>{names}</Txt>
-  </Item>
-);
+const AchievementItem = ({ names, numbers, icon, small }) => {
+  const [visible, setVisible] = useState(false);
+
+  const numberRef = useRef();
+
+  useEffect(() => {
+    // console.log(numberRef);
+    const opitons = {
+      root: null,
+      threshold: 1,
+      rootMargin: "0px",
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(entry.target);
+          setVisible(true);
+        }
+      });
+    }, opitons);
+
+    observer.observe(numberRef.current);
+  });
+
+  return (
+    <Item>
+      {console.log(visible)}
+      <Icon className={icon} small={small}></Icon>
+      <Amount small={small} ref={numberRef}>
+        {/*  {numbers} */}
+        <CountUp end={visible ? numbers : 0} />
+      </Amount>
+      <Txt small={small}>{names}</Txt>
+    </Item>
+  );
+};
 
 export default AchievementItem;
