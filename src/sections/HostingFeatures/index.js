@@ -35,7 +35,7 @@ const HostingFeatures = () => {
     const observer = new IntersectionObserver(function (entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.animation = `${fadeIn.name} 2s ${delay}s ease both`;
+          entry.target.style.animation = `${fadeIn.name} 1.2s ${delay}s cubic-bezier(0.390, 0.575, 0.565, 1.000) both`;
           delay += 0.2;
         }
       });

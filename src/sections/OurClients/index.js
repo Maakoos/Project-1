@@ -29,10 +29,18 @@ const OurClients = () => {
         <Heading>Our client say</Heading>
         <>
           <CardsBox>
-            <ClientCard name="1" position="desinger" imgSrc={clientImgOne} />
-            <ClientCard name="2" position="Programist" imgSrc={clientImgTwo} />
             <ClientCard
-              name="3"
+              name="Margaret Dials"
+              position="desinger"
+              imgSrc={clientImgOne}
+            />
+            <ClientCard
+              name="Ashley Strand"
+              position="Programist"
+              imgSrc={clientImgTwo}
+            />
+            <ClientCard
+              name="Elizabeth Lynn"
               position="UI/UX Desinger"
               imgSrc={clientImgThree}
             />

@@ -4,16 +4,38 @@ import line from "img/line.png";
 
 const anim = keyframes`
 0% {
-    letter-spacing: -0.5em;
-    transform: translateZ(-700px) translateY(-500px);
+    transform: translateX(-600px);
+    animation-timing-function: ease-in;
     opacity: 0;
   }
-  40% {
-    opacity: 0.6;
+  38% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(-68px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateX(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateX(-8px);
+    animation-timing-function: ease-in;
   }
   100% {
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
+    transform: translateX(0);
+    animation-timing-function: ease-out;
   }
 `;
 
@@ -23,9 +45,11 @@ const HeadingTxt = styled.h2`
   position: relative;
   font-size: ${({ size }) => size || "30px"};
   text-transform: uppercase;
+  opacity: 0;
 
   &.anim {
     animation: ${anim} 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    opacity: 1;
   }
 
   &::after {
@@ -60,6 +84,7 @@ const HeadingTxt = styled.h2`
     noLine &&
     css`
         text-align: left;
+        opacity: 1;
 
         &::after {
           display: none;

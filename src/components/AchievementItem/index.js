@@ -42,7 +42,6 @@ const AchievementItem = ({ names, numbers, icon, small }) => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry.target);
           setVisible(true);
         }
       });
@@ -53,7 +52,6 @@ const AchievementItem = ({ names, numbers, icon, small }) => {
 
   return (
     <Item>
-      {console.log(visible)}
       <Icon className={icon} small={small}></Icon>
       <Amount small={small} ref={numberRef}>
         {/*  {numbers} */}

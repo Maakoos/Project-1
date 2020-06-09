@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useRef } from "react";
+import styled, { keyframes } from "styled-components";
 import Container from "components/Container";
 import Heading from "components/Heading";
 import Form from "components/Form";
@@ -14,10 +14,53 @@ const ContentBox = styled.div`
   }
 `;
 
+const bounceIn = keyframes`
+  0% {
+    transform: scale(0);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: scale(0.7);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: scale(0.84);
+    animation-timing-function: ease-in;
+  }
+  89% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+`;
+
 const QuestionBox = styled.div`
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+
+  &.bounceIn {
+    animation: ${bounceIn} 1.1s both;
+    opacity: 1;
+  }
 `;
 
 const Question = styled.button`
@@ -60,6 +103,8 @@ const Description = styled.p`
 `;
 
 const QuestionsSection = () => {
+  const questionBoxRef = useRef();
+
   const handleChangeActive = (e) => {
     const accordionContent = e.target.nextElementSibling;
     e.target.classList.toggle("active");
@@ -71,12 +116,30 @@ const QuestionsSection = () => {
     }
   };
 
+  useEffect(() => {
+    const options = {
+      root: null,
+      threshold: 1,
+      rootMargin: "0px",
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("bounceIn");
+        }
+      });
+    }, options);
+
+    observer.observe(questionBoxRef.current);
+  });
+
   return (
     <section>
       <Container>
         <Heading>Have a questions?</Heading>
         <ContentBox>
-          <QuestionBox>
+          <QuestionBox ref={questionBoxRef}>
             <Question onClick={(e) => handleChangeActive(e)}>
               How do I cancel my and delete my account?
             </Question>

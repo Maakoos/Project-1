@@ -1,11 +1,54 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React, { useEffect, useRef } from "react";
+import styled, { css, keyframes } from "styled-components";
 import Button from "components/Button";
+
+const bounceIn = keyframes`
+  0% {
+    transform: scale(0);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: scale(0.7);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: scale(0.84);
+    animation-timing-function: ease-in;
+  }
+  89% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+`;
 
 const FormBox = styled.form`
   margin-top: 20px;
   max-width: 555px;
   grid-area: form;
+  opacity: 0;
+
+  &.bounceIn {
+    animation: ${bounceIn} 1.1s both;
+    opacity: 1;
+  }
 
   ${({ flex }) =>
     flex &&
@@ -41,13 +84,35 @@ const TextArea = styled.textarea`
   resize: none;
 `;
 
-const Form = ({ flex }) => (
-  <FormBox type="submit" flex={flex}>
-    <Input type="text" placeholder="Name" />
-    <Input type="email" placeholder="Email" />
-    <TextArea placeholder="Question" />
-    <Button>Send Question</Button>
-  </FormBox>
-);
+const Form = ({ flex }) => {
+  const formBoxRef = useRef();
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      threshold: 1,
+      rootMargin: "0px",
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("bounceIn");
+        }
+      });
+    }, options);
+
+    observer.observe(formBoxRef.current);
+  });
+
+  return (
+    <FormBox type="submit" flex={flex} ref={formBoxRef}>
+      <Input type="text" placeholder="Name" />
+      <Input type="email" placeholder="Email" />
+      <TextArea placeholder="Question" />
+      <Button>Send Question</Button>
+    </FormBox>
+  );
+};
 
 export default Form;

@@ -7,6 +7,7 @@ const Item = styled.div`
   background-color: #fff;
   border-radius: ${({ icon }) => (icon ? "0" : "10px;")};
   box-shadow: 0px 0px 10px rgba(18, 8, 81, 0.15);
+  opacity: 0;
   transition: box-shadow 0.2s linear;
 
   &:hover {
