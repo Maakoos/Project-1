@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "styles/GlobalStyle";
 import { theme } from "styles/theme";
@@ -21,9 +21,9 @@ const App = () => {
   };
 
   return (
-    <MyContext.Provider value={contextElements}>
-      <div className="App">
-        <BrowserRouter>
+    <div className="App">
+      <MyContext.Provider value={contextElements}>
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <GlobalStyle />
           <ThemeProvider theme={theme}>
             <Header />
@@ -36,9 +36,9 @@ const App = () => {
             </Switch>
             <Footer />
           </ThemeProvider>
-        </BrowserRouter>
-      </div>
-    </MyContext.Provider>
+        </HashRouter>
+      </MyContext.Provider>
+    </div>
   );
 };
 

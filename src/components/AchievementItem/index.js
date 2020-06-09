@@ -57,7 +57,7 @@ const AchievementItem = ({ names, numbers, icon, small }) => {
       <Icon className={icon} small={small}></Icon>
       <Amount small={small} ref={numberRef}>
         {/*  {numbers} */}
-        <CountUp end={visible ? numbers : 0} />
+        <CountUp end={visible && numbers} />
       </Amount>
       <Txt small={small}>{names}</Txt>
     </Item>
