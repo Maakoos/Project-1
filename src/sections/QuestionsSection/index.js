@@ -103,7 +103,7 @@ const Description = styled.p`
 `;
 
 const QuestionsSection = () => {
-  const questionBoxRef = useRef();
+  const questionBoxRef = useRef(null);
 
   const handleChangeActive = (e) => {
     const accordionContent = e.target.nextElementSibling;

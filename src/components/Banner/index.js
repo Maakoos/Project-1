@@ -58,11 +58,11 @@ const Banner = () => {
   const [posX, setPosX] = useState();
   const [posY, setPosY] = useState();
 
-  const headingRef = useRef();
+  const headingRef = useRef(null);
 
-  const bannerRef = useRef();
+  const bannerRef = useRef(null);
 
-  const imgRef = useRef();
+  const imgRef = useRef(null);
 
   const setNewPosition = (e) => {
     const { clientX, clientY } = e;

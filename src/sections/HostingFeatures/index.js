@@ -26,7 +26,7 @@ const CardsBox = styled.div`
 `;
 
 const HostingFeatures = () => {
-  const boxRef = useRef();
+  const boxRef = useRef(null);
 
   useEffect(() => {
     const cards = boxRef.current.children;

@@ -29,7 +29,7 @@ const Txt = styled.span`
 const AchievementItem = ({ names, numbers, icon, small }) => {
   const [visible, setVisible] = useState(false);
 
-  const numberRef = useRef();
+  const numberRef = useRef(null);
 
   useEffect(() => {
     // console.log(numberRef);

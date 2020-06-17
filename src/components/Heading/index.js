@@ -106,7 +106,7 @@ const HeadingTxt = styled.h2`
 `;
 
 const Heading = ({ children, small, white, size, noLine, contact }) => {
-  const headingRef = useRef();
+  const headingRef = useRef(null);
 
   useEffect(() => {
     const options = {

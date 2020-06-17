@@ -85,7 +85,7 @@ const TextArea = styled.textarea`
 `;
 
 const Form = ({ flex }) => {
-  const formBoxRef = useRef();
+  const formBoxRef = useRef(null);
 
   useEffect(() => {
     const options = {

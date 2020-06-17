@@ -28,7 +28,7 @@ const Icon = styled.span`
 `;
 
 const ContactIcon = ({ iconClass }) => {
-  const iconRef = useRef();
+  const iconRef = useRef(null);
 
   useEffect(() => {
     const options = {

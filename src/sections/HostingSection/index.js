@@ -26,7 +26,7 @@ const GridBox = styled.div`
 `;
 
 const HostingSection = () => {
-  const boxRef = useRef();
+  const boxRef = useRef(null);
 
   useEffect(() => {
     const cards = boxRef.current.children;
