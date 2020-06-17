@@ -22,7 +22,7 @@ const OurTeam = () => {
 
     const options = {
       root: null,
-      threshold: 0.65,
+      threshold: 0.49,
       // rootMargin: "-210px",
       rootMargin: "0px",
     };
