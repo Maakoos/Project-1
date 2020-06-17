@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Project-1/static/js/main.c98e347c.chunk.js",
-    "main.js.map": "/Project-1/static/js/main.c98e347c.chunk.js.map",
+    "main.js": "/Project-1/static/js/main.0f12d412.chunk.js",
+    "main.js.map": "/Project-1/static/js/main.0f12d412.chunk.js.map",
     "runtime-main.js": "/Project-1/static/js/runtime-main.b113709f.js",
     "runtime-main.js.map": "/Project-1/static/js/runtime-main.b113709f.js.map",
     "static/js/2.9711d74b.chunk.js": "/Project-1/static/js/2.9711d74b.chunk.js",
     "static/js/2.9711d74b.chunk.js.map": "/Project-1/static/js/2.9711d74b.chunk.js.map",
     "index.html": "/Project-1/index.html",
-    "precache-manifest.5a4c1413afc4575cf928c7fd4296db45.js": "/Project-1/precache-manifest.5a4c1413afc4575cf928c7fd4296db45.js",
+    "precache-manifest.ec9372b41ac2ba1c7f9447da9778650c.js": "/Project-1/precache-manifest.ec9372b41ac2ba1c7f9447da9778650c.js",
     "service-worker.js": "/Project-1/service-worker.js",
     "static/js/2.9711d74b.chunk.js.LICENSE.txt": "/Project-1/static/js/2.9711d74b.chunk.js.LICENSE.txt",
     "static/media/about-us.png": "/Project-1/static/media/about-us.e7718052.png",
@@ -22,6 +22,6 @@
   "entrypoints": [
     "static/js/runtime-main.b113709f.js",
     "static/js/2.9711d74b.chunk.js",
-    "static/js/main.c98e347c.chunk.js"
+    "static/js/main.0f12d412.chunk.js"
   ]
 }
