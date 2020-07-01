@@ -11,7 +11,7 @@ Website create with React
 - NPM
 - Styled Components
 - GIT
-- Countup
+- React CountUp
 
 ## Available scripts 💾
 
